@@ -49,3 +49,20 @@ class Stack:
 print(s.removeDuplicate('bcabc'))'''
 
 
+def alphabet_position(text):
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    dict = {}
+    list = []
+    for i, a in enumerate(alphabet):
+        dict[a] = i + 1
+
+    for t in text:
+        t = t.lower()
+        if t not in alphabet:
+            pass
+        else:
+            print(t)
+            list.append(str(dict[t]))
+    return " ".join(list)
+
+print(alphabet_position("The sunset sets at twelve o' clock."))

@@ -192,7 +192,6 @@ class SubString:
             else:
                 # 왜? 알 것 같으면서도... index+1-start는 현재 보는 글자 string max 숫자
                 max_length = max(max_length,index-start+1)
-
             used[char] = index
         return max_length
 
@@ -213,9 +212,44 @@ s에는 둘 이상의 정수가 공백으로 구분되어 있습니다.
 "-1 -1"	        "-1 -1"
 '''
 
+# def solution(string):
+#     string = string.replace(" ","")
+#     list1 = list(string)
+#     list_int = []
+#     for i in range(len(list1)):
+#         if list1[i]=='-':
+#             list1[i+1] = int(list1[i]+list1[i+1])
+#         elif type(int(list1[i]))==int:
+#             list1[i] = int(list1[i])
+#     for l in list1:
+#         if type(l)==int:
+#             list_int .append(l)
+#     list_int = sorted(list_int )
+#     list_string = list(map(str, list_int))
+#     return " ".join(list_string)
+
+# def solution(string):
+#     string = string.replace(" ","")
+#     list1 = list(string)
+#     list_int = []
+#     list_string = []
+#     for i in range(len(list1)):
+#         if list1[i]=='-':
+#             list1[i+1] = int(list1[i]+list1[i+1])
+#         elif type(int(list1[i]))==int:
+#             list1[i] = int(list1[i])
+#     for l in list1:
+#         if type(l)==int:
+#             list_int .append(l)
+#     list_string.append(str(min(list_int)))
+#     list_string.append(str(max(list_int)))
+#     return " ".join(list_string)
+
 def solution(s):
-    answer = ''
-    return answer
+    list_int = sorted(list(map(int, s.split(' '))))
+    return f'{str(min(list_int))} {str(max(list_int))}'
+
+# print(solution("-1 2 3 -4"))
 
 '''
 주식가격
@@ -275,8 +309,13 @@ priorities	        location	return
 
 
 def solution(priorities, location):
-    answer = 0
-    return answer
+    queue = [(i,x) for i, x in enumerate(priorities)]
+    
+    return location
+
+
+
+
 
 
 '''
