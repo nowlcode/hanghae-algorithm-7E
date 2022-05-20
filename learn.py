@@ -65,4 +65,11 @@ def alphabet_position(text):
             list.append(str(dict[t]))
     return " ".join(list)
 
-print(alphabet_position("The sunset sets at twelve o' clock."))
+# print(alphabet_position("The sunset sets at twelve o' clock."))
+
+
+
+import pprint
+# a = range(6)
+
+# print(globals())
