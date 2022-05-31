@@ -1,4 +1,49 @@
-# 배열 Array 연습
+## 배열 Array 구현 ##
+class Array:
+    def array(self, num:int)-> list:
+        answer = []
+        for i in range(num):
+            answer.append(i)
+        return answer
+
+# a = Array()
+# print(a.array(4))
+
+## Linked List 구현 ##
+class Node:
+    def __init__(self,val=0,next=None):
+        self.val = val
+        self.next = next
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, value):
+        if not self.head:
+            self.head = Node(value,None)
+            return
+        node = self.head
+        while node.next:
+            node=node.next
+
+        node.next = Node(value,None)
+
+
+
+
+
+## 스택 구현 ##
+
+## 큐 구현 ##
+
+## 해시테이블 구현 ##
+
+
+
+
+
+## 배열 Array 연습 ##
 def solution(array, commands):
     answer = []
     for c in commands:
@@ -31,16 +76,4 @@ def solution3(numbers):
             max_list.append(answer)
 
     return max_list
-print(solution3([6, 10, 2]))
-
-
-# 배열 Array 연습
-
-
-# Linked List 구현
-
-# 스택 구현
-
-# 큐 구현
-
-# 해시테이블 구현
+# print(solution3([6, 10, 2]))
